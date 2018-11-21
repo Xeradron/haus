@@ -6,9 +6,31 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
 /*
+
+
 http://mcg.mbitson.com/#!?mcgpalette0=%233f51b5&themename=mcgtheme
 https://www.materialpalette.com/amber/blue
 https://codecondo.com/10-material-design-color-palette-generators-2/
+
+https://medium.com/@tomastrajan/the-complete-guide-to-angular-material-themes-4d165a9d24d1
+*/
+
+/*
+schöner theme : https://codepen.io/crystal_lu/pen/PNEZjx
+IDEE:######################
+
+// define 3 theme color
+// mat-palette accepts $palette-name, main, lighter and darker variants
+$my-theme-primary: mat-palette($mat-grey, 900); #212121
+$my-theme-accent: mat-palette($mat-grey, 700); #424242
+$my-theme-warn: mat-palette($mat-deep-orange, 500); #ff5722
+
+// create theme (use mat-dark-theme for themes with dark backgrounds)
+$my-theme: mat-dark-theme(
+    $my-theme-primary,
+    $my-theme-accent,
+    $my-theme-warn
+);
 */
 
 // @import '@angular/material/prebuilt-themes/indigo-pink.css';
