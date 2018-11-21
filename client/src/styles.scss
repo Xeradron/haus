@@ -1,1 +1,130 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+/*
+http://mcg.mbitson.com/#!?mcgpalette0=%233f51b5&themename=mcgtheme
+https://www.materialpalette.com/amber/blue
+https://codecondo.com/10-material-design-color-palette-generators-2/
+*/
+
+// @import '@angular/material/prebuilt-themes/indigo-pink.css';
+/*
+  deeppurple-amber.css
+  indigo-pink.css
+  pink-bluegrey.css
+  purple-green.css
+*/
+
+//=============================THEME================================
+/*
+@import '~@angular/material/theming';
+
+$test: (
+  50 : #e8eaf6,
+  100 : #c5cbe9,
+  200 : #9fa8da,
+  300 : #7985cb,
+  400 : #5c6bc0,
+  500 : #3f51b5,
+  600 : #394aae,
+  700 : #3140a5,
+  800 : #29379d,
+  900 : #1b278d,
+  A100 : #c6cbff,
+  A200 : #939dff,
+  A400 : #606eff,
+  A700 : #4757ff,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #ffffff,
+      A700 : #ffffff,
+  )
+);
+
+$general-typography: mat-typography-config(
+  $font-family: 'Roboto'
+);
+
+@include angular-material-typography($general-typography);
+@include mat-core($general-typography);
+
+$my-app-primary: mat-palette($test);
+$my-app-accent:  mat-palette($test);
+$my-app-warn:    mat-palette($mat-red);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+*/
+//=============================FONT================================
+
+
+//=============================GLOBAL================================
+/*
+* {
+  font-family: mat-font-family($general-typography);
+}
+
+html, body, app-root{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+*/
+//=============================MATERIALICONS================================
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/font//MaterialIcons-Regular.eot);
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(/assets/font/MaterialIcons-Regular.woff2) format('woff2'),
+    url(/assets/font/MaterialIcons-Regular.woff) format('woff'),
+    url(/assets/font/MaterialIcons-Regular.ttf) format('truetype'),
+    url(/assets/font/MaterialIcons-Regular.eot) format('embedded-opentype'),
+    url(/assets/font/MaterialIcons-Regular.svg#MaterialIcons-Regular) format('svg');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
