@@ -1,0 +1,19 @@
+{
+  "name": "haus",
+  "version": "1.0.0",
+  "description": "hausautomatisierung",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xeradron/haus.git"
+  },
+  "author": "Xeradron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xeradron/haus/issues"
+  },
+  "homepage": "https://github.com/Xeradron/haus#readme"
+}
