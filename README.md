@@ -16,12 +16,15 @@ server: loopback 4
 ################################################################################
 Ziele:
     mapping:
+        definieren von inputs mit namen etc.
         mapping von inputpins und outputspins des controllers
 
         input: Taster Schalter Dimmer etc.
         output: relais die schüzue schalten
 
         n inputs können mit n outputs kombiniert werden
+    live status:
+        welche inputs und outsputs haben welchen aktuelellen status
 
     controlling:
         messung der leistung (live)
