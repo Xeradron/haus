@@ -4,13 +4,62 @@ npm install -g @angular/cli
 npm install -g loopback-cli 
 
 
-client: angular 7
+client: 
+angular 7
 angular material 7
 @harmowatch/openapi-generator-cli  OPENAPI v3 to angular 7 services
 @ngrx/store     angular state container redux flux pattern
 
+server: 
+loopback 4
 
-server: loopback 4
+neuerstellen:
+mkdir haus
+cd haus
+mkdir microcontroller
+ng new client
+lb4 server
+cd client
+ng add @angular/material
+npm install @harmowatch/openapi-generator-cli -D
+npm install @ngrx/store 
+npm install @ngrx/store-devtools
+
+
+fonts:
+nidus sans
+borg
+elianto
+exan-3
+dual
+halogen
+phage
+Cyberpunk Is Not Dead
+megatron
+swerve
+Cyber Freight
+
+
+vscode plugins:
+Angular 7 Snippets - TypeScript, Html, Angular Material, ngRx, RxJS & Flex Layout
+Angular v7 Snippets
+Auto Rename Tag
+Document This
+EditorConfig for VS Code
+Git History
+JavaScript (ES6) code snippets
+JSON to TS
+Latest TypeScript and Javascript Grammar
+Move TS - Move TypeScript files and update relative imports
+Paste JSON as Code
+Path Intellisense
+christian-kohler.path-intellisense
+refactorix
+TODO Highlight
+TSLint
+VSCode simpler Icons with Angular
+
+
 
 
 ################################################################################
