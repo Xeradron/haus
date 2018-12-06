@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "my-awesome-script-name": "openapi-generator generate -i docs/openapi.yaml -g typescript-angular -o generated-sources/openapi --additional-properties=\"ngVersion=7.0.0\""
+    "generate-ng-openapi-sdk": "openapi-generator generate -i openapi/openapi.json -g typescript-angular -o openapi/generated-sources/openapi --additional-properties=\"ngVersion=7.0.0\""
   },
   "private": true,
   "dependencies": {
@@ -35,7 +35,7 @@
     "@angular/cli": "~7.0.3",
     "@angular/compiler-cli": "~7.0.0",
     "@angular/language-service": "~7.0.0",
-    "@harmowatch/openapi-generator-cli": "0.0.3-3.3.3",
+    "@openapitools/openapi-generator-cli": "0.0.7-3.3.4",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
