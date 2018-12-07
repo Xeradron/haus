@@ -1,0 +1,248 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "LoopBack Application",
+    "version": "1.0.0"
+  },
+  "host": "127.0.0.1:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/todos": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "filter",
+            "type": "object"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Array of Todo model instances",
+            "schema": {
+              "items": {
+                "$ref": "#/definitions/Todo"
+              },
+              "type": "array"
+            }
+          }
+        },
+        "tags": [
+          "TodoController"
+        ],
+        "x-controller-name": "TodoController",
+        "x-operation-name": "find"
+      },
+      "patch": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "where",
+            "type": "object"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Todo"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Todo PATCH success count",
+            "schema": {
+              "properties": {
+                "count": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            }
+          }
+        },
+        "tags": [
+          "TodoController"
+        ],
+        "x-controller-name": "TodoController",
+        "x-operation-name": "updateAll"
+      },
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Todo"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Todo model instance",
+            "schema": {
+              "$ref": "#/definitions/Todo"
+            }
+          }
+        },
+        "tags": [
+          "TodoController"
+        ],
+        "x-controller-name": "TodoController",
+        "x-operation-name": "create"
+      }
+    },
+    "/todos/count": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "where",
+            "type": "object"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Todo model count",
+            "schema": {
+              "properties": {
+                "count": {
+                  "type": "number"
+                }
+              },
+              "type": "object"
+            }
+          }
+        },
+        "tags": [
+          "TodoController"
+        ],
+        "x-controller-name": "TodoController",
+        "x-operation-name": "count"
+      }
+    },
+    "/todos/{id}": {
+      "delete": {
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Todo DELETE success"
+          }
+        },
+        "tags": [
+          "TodoController"
+        ],
+        "x-controller-name": "TodoController",
+        "x-operation-name": "deleteById"
+      },
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Todo model instance",
+            "schema": {
+              "$ref": "#/definitions/Todo"
+            }
+          }
+        },
+        "tags": [
+          "TodoController"
+        ],
+        "x-controller-name": "TodoController",
+        "x-operation-name": "findById"
+      },
+      "patch": {
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "$ref": "#/definitions/Todo"
+            },
+            "x-parameter-index": 1
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Todo PATCH success"
+          }
+        },
+        "tags": [
+          "TodoController"
+        ],
+        "x-controller-name": "TodoController",
+        "x-operation-name": "updateById"
+      }
+    }
+  },
+  "definitions": {
+    "Todo": {
+      "properties": {
+        "desc": {
+          "type": "string"
+        },
+        "id": {
+          "type": "number"
+        },
+        "isComplete": {
+          "type": "boolean"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "title": "Todo"
+    }
+  },
+  "x-components": {}
+}
