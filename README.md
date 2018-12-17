@@ -4,16 +4,16 @@ npm install -g @angular/cli
 npm install -g loopback-cli 
 
 
-client: 
+#client: 
 angular 7
 angular material 7
 @harmowatch/openapi-generator-cli  OPENAPI v3 to angular 7 services
 @ngrx/store     angular state container redux flux pattern
 
-server: 
+#server: 
 loopback 4
 
-neuerstellen:
+#neuerstellen:
 mkdir haus
 cd haus
 mkdir microcontroller
@@ -25,8 +25,11 @@ npm install @harmowatch/openapi-generator-cli -D
 npm install @ngrx/store 
 npm install @ngrx/store-devtools
 
+# ideen für raspberry:
+https://github.com/nebrius/raspi
 
-fonts:
+
+#fonts
 nidus sans
 borg
 elianto
@@ -40,7 +43,7 @@ swerve
 Cyber Freight
 
 
-vscode plugins:
+#vscode plugins:
 Angular 7 Snippets - TypeScript, Html, Angular Material, ngRx, RxJS & Flex Layout
 Angular v7 Snippets
 Auto Rename Tag
@@ -60,10 +63,7 @@ TSLint
 VSCode simpler Icons with Angular
 
 
-
-
-################################################################################
-Ziele:
+#Ziele:
     mapping:
         definieren von inputs mit namen etc.
         mapping von inputpins und outputspins des controllers
@@ -101,7 +101,7 @@ Ziele:
 
 
 
-Architektur:
+#Architektur:
     gesamte kummunikations über restful api
     frontend und microcontroller sind nur http clients
     backend über loopback stellt http server
