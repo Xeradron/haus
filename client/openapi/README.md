@@ -1,13 +1,18 @@
 
-
-https://lucybot-inc.github.io/api-spec-converter/
-
-
+#Ansätze
+https://github.com/cyclosproject/ng-openapi-gen
+https://github.com/cyclosproject/ng-swagger-gen
 https://github.com/LucyBot-Inc/api-spec-converter
+https://github.com/OpenAPITools/openapi-generator
 
+#v2
+1. aus dem loopback die openapi json rauskopieren un openapi.json
+2. npm run generate-openapiv3tov2
+3. npm run generate-ng-sdk-v2
 
--in gestartetem lb4 server die openapiv3 spec rauskopieren
--dann aus openapiv3 openapiv2 (swagger) machen
--dann aus dem swagger ein angular sdkn generieren
+#v3
+aus openapi direkt ein sdk erstellen funktioniert nicht
+npm run generate-ng-sdk-v3 geht nicht ergibt fehlerhafte library
 
-generierung aus dem openapiv3 direkt zu angular funktioni9ert momentan nicht
+#v4
+npm run generate-ng-openapi-sdk

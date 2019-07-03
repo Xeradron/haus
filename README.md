@@ -3,12 +3,12 @@
 npm install -g @angular/cli
 npm install -g loopback-cli 
 
-
 #client: 
-angular 7
-angular material 7
-@harmowatch/openapi-generator-cli  OPENAPI v3 to angular 7 services
+angular 8
+angular material 8
+@harmowatch/openapi-generator-cli  OPENAPI v3 to angular 7 services oder ng-openapi-gen
 @ngrx/store     angular state container redux flux pattern
+WICHTIG!!! siehe github seite zu state containern!!!!
 
 #server: 
 loopback 4
@@ -21,9 +21,12 @@ ng new client
 lb4 server
 cd client
 ng add @angular/material
-npm install @harmowatch/openapi-generator-cli -D
+npm install ng-openapi-gen
 npm install @ngrx/store 
 npm install @ngrx/store-devtools
+
+#neuanlegen testschematiken
+https://material.angular.io/guide/schematics
 
 # ideen für raspberry:
 https://github.com/nebrius/raspi
