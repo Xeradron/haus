@@ -1,2 +1,45 @@
-<p>todo-test works!</p>
-<p>{{todoCount}}</p>
+
+
+<div class="todocontainer">
+    <div class="todoitemcontainer">
+        <p>Anzahl: {{todoCount}}</p>
+    </div>
+    <div class="todoitemcontainer">
+        <table mat-table [dataSource]="todos" class="todotable">
+
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> ID </th>
+                <td mat-cell *matCellDef="let todo"> {{todo.id}} </td>
+            </ng-container>
+            
+            <ng-container matColumnDef="title">
+                <th mat-header-cell *matHeaderCellDef> Title </th>
+                <td mat-cell *matCellDef="let todo"> {{todo.title}} </td>
+            </ng-container>
+            
+            <ng-container matColumnDef="desc">
+                <th mat-header-cell *matHeaderCellDef> Description </th>
+                <td mat-cell *matCellDef="let todo"> {{todo.desc}} </td>
+            </ng-container>
+            
+            <tr mat-header-row *matHeaderRowDef="displayedCoulmns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedCoulmns;" (click)=getTodoByID(row.id)></tr>
+        </table>
+
+    </div>
+    <div class="todoitemcontainer">
+        <form class="editformcontainer" [formGroup]=todoFormGroup>
+            <mat-form-field appearance="outline">
+                <mat-label>Title</mat-label>
+                <input matInput type=text formControlName="title">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Description</mat-label>
+                <input matInput type=text formControlName="desc">
+            </mat-form-field>
+        </form>
+        <button mat-raised-button [disabled]="!selectedID" (click)="updateTodobyID(selectedID)" color="primary">SAVE</button>
+        <button mat-raised-button [disabled]="!selectedID" (click)="deleteTodoByID(selectedID)" color="primary">DELETE</button>
+        <button mat-raised-button (click)="addTodo()" color="primary">ADD</button>
+    </div>
+</div>
