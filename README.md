@@ -10,6 +10,14 @@ angular material 8
 @ngrx/store     angular state container redux flux pattern
 WICHTIG!!! siehe github seite zu state containern!!!!
 
+#neue idee 02.10.2019
+architektur
+DB <> Loopback4 <> RESTful API <> openapispec <> openapi-to-graphql <> graphql <> Apollographql-angular <> angular <> state container <> GUI
+
+damit kann das problem für eine frontendapi aus openapi verbessert werden
+
+https://github.com/IBM/openapi-to-graphql
+
 #server: 
 loopback 4
 
