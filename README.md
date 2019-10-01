@@ -10,6 +10,12 @@ angular material 8
 @ngrx/store     angular state container redux flux pattern
 WICHTIG!!! siehe github seite zu state containern!!!!
 
+#NEUE IDEE
+02.10.2019
+
+DB <-> Loopback4 <-> GraphQL <-> Apollo-Angular <-> Angular8
+-GraphQL und Apollo-Angular nutzen um generatoren und statische apis (OpenapiToAngular) loszuwerden
+
 #server: 
 loopback 4
 
