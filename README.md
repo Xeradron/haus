@@ -10,13 +10,6 @@ angular material 8
 @ngrx/store     angular state container redux flux pattern
 WICHTIG!!! siehe github seite zu state containern!!!!
 
-#NEUE IDEE
-02.10.2019
-
-DB <-> Loopback4 <-> GraphQL <-> Apollo-Angular <-> ngrx/store(statecontainer) <-> Angular8 <-> GUI 
-PRÜFEN ob state container im apollo integriert ist
--GraphQL und Apollo-Angular nutzen um generatoren und statische apis (OpenapiToAngular) loszuwerden
-
 #server: 
 loopback 4
 
@@ -38,6 +31,8 @@ https://material.angular.io/guide/schematics
 # ideen für raspberry:
 https://github.com/nebrius/raspi
 
+#theme
+https://codepen.io/crystal_lu/pen/PNEZjx
 
 #fonts
 nidus sans
@@ -118,3 +113,14 @@ VSCode simpler Icons with Angular
     backend ist an db (mongo oder couchbase angeschlossen)
 
 
+#später in Gitlab Umgebung
+#über gitlab ci integrieren
+
+ng lint
+ng karma tests
+ng e2e tests
+sonarqube
+
+builden deployen 
+in static ordner vom loopback
+https://javascript-conference.com/blog/build-test-deployment-angular-gitlab-ci/
