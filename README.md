@@ -13,7 +13,8 @@ WICHTIG!!! siehe github seite zu state containern!!!!
 #NEUE IDEE
 02.10.2019
 
-DB <-> Loopback4 <-> GraphQL <-> Apollo-Angular <-> Angular8
+DB <-> Loopback4 <-> GraphQL <-> Apollo-Angular <-> ngrx/store(statecontainer) <-> Angular8 <-> GUI 
+PRÜFEN ob state container im apollo integriert ist
 -GraphQL und Apollo-Angular nutzen um generatoren und statische apis (OpenapiToAngular) loszuwerden
 
 #server: 
