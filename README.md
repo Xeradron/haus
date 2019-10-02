@@ -14,6 +14,7 @@ WICHTIG!!! siehe github seite zu state containern!!!!
 architektur
 DB <> Loopback4 <> RESTful API <> openapispec <> openapi-to-graphql <> graphql <> Apollographql-angular <> angular <> state container <> GUI
 
+eventuell kann duch apollo der state container weggelassen werden
 damit kann das problem für eine frontendapi aus openapi verbessert werden
 
 https://github.com/IBM/openapi-to-graphql
