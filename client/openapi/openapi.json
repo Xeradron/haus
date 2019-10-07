@@ -356,7 +356,7 @@
   },
   "servers": [
     {
-      "url": "http://127.0.0.1:3000"
+      "url": "http://localhost:3000"
     }
   ],
   "components": {
@@ -381,6 +381,15 @@
       "NewTodo": {
         "title": "NewTodo",
         "description": "(Schema options: { title: 'NewTodo', exclude: [ 'id' ] })",
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "id"
+              ]
+            }
+          ]
+        },
         "properties": {
           "title": {
             "type": "string"
