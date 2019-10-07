@@ -1,5 +1,5 @@
 {
-  "name": "memorytest",
+  "name": "filedb",
   "connector": "memory",
   "localStorage": "",
   "file": "./testdb/db.json"

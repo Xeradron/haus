@@ -5,6 +5,7 @@ export class Todo extends Entity {
   @property({
     type: 'number',
     id: true,
+    generated: false,
   })
   id?: number;
 
@@ -15,16 +16,19 @@ export class Todo extends Entity {
   title: string;
 
   @property({
-    type: 'string',
-  })
-  desc?: string;
-
-  @property({
     type: 'boolean',
+    default: false,
   })
   isComplete?: boolean;
+
 
   constructor(data?: Partial<Todo>) {
     super(data);
   }
 }
+
+export interface TodoRelations {
+  // describe navigational properties here
+}
+
+export type TodoWithRelations = Todo & TodoRelations;

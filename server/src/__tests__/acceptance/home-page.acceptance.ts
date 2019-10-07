@@ -1,14 +1,9 @@
-// Copyright IBM Corp. 2018. All Rights Reserved.
-// Node module: @loopback/example-shopping
-// This file is licensed under the MIT License.
-// License text available at https://opensource.org/licenses/MIT
-
 import {Client} from '@loopback/testlab';
-import {Haussteuerung} from '../..';
+import {ServerApplication} from '../..';
 import {setupApplication} from './test-helper';
 
 describe('HomePage', () => {
-  let app: Haussteuerung;
+  let app: ServerApplication;
   let client: Client;
 
   before('setupApplication', async () => {

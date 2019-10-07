@@ -5,6 +5,48 @@
     "version": "1.0.0"
   },
   "paths": {
+    "/ping": {
+      "get": {
+        "x-controller-name": "PingController",
+        "x-operation-name": "ping",
+        "tags": [
+          "PingController"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ping Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "greeting": {
+                      "type": "string"
+                    },
+                    "date": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "headers": {
+                      "type": "object",
+                      "properties": {
+                        "Content-Type": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "PingController.ping"
+      }
+    },
     "/todos/count": {
       "get": {
         "x-controller-name": "TodoController",
@@ -44,6 +86,39 @@
       }
     },
     "/todos/{id}": {
+      "put": {
+        "x-controller-name": "TodoController",
+        "x-operation-name": "replaceById",
+        "tags": [
+          "TodoController"
+        ],
+        "responses": {
+          "204": {
+            "description": "Todo PUT success"
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "schema": {
+              "type": "number"
+            },
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Todo"
+              }
+            }
+          },
+          "x-parameter-index": 1
+        },
+        "operationId": "TodoController.replaceById"
+      },
       "patch": {
         "x-controller-name": "TodoController",
         "x-operation-name": "updateById",
@@ -69,7 +144,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Todo"
+                "$ref": "#/components/schemas/TodoPartial"
               }
             }
           },
@@ -154,7 +229,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Todo"
+                "$ref": "#/components/schemas/NewTodo"
               }
             }
           }
@@ -199,7 +274,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Todo"
+                "$ref": "#/components/schemas/TodoPartial"
               }
             }
           }
@@ -234,6 +309,7 @@
             "style": "deepObject",
             "explode": true,
             "schema": {
+              "type": "object",
               "properties": {
                 "where": {
                   "type": "object"
@@ -245,9 +321,6 @@
                       "type": "boolean"
                     },
                     "title": {
-                      "type": "boolean"
-                    },
-                    "desc": {
                       "type": "boolean"
                     },
                     "isComplete": {
@@ -273,8 +346,7 @@
                     "type": "string"
                   }
                 }
-              },
-              "type": "object"
+              }
             }
           }
         ],
@@ -298,7 +370,19 @@
           "title": {
             "type": "string"
           },
-          "desc": {
+          "isComplete": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "title"
+        ]
+      },
+      "NewTodo": {
+        "title": "NewTodo",
+        "description": "(Schema options: { title: 'NewTodo', exclude: [ 'id' ] })",
+        "properties": {
+          "title": {
             "type": "string"
           },
           "isComplete": {
@@ -308,6 +392,21 @@
         "required": [
           "title"
         ]
+      },
+      "TodoPartial": {
+        "title": "TodoPartial",
+        "description": "(Schema options: { partial: true })",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "title": {
+            "type": "string"
+          },
+          "isComplete": {
+            "type": "boolean"
+          }
+        }
       }
     }
   }

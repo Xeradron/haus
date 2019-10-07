@@ -1,14 +1,15 @@
-import {DefaultCrudRepository, juggler} from '@loopback/repository';
-import {Todo} from '../models';
-import {MemorytestDataSource} from '../datasources';
+import {DefaultCrudRepository} from '@loopback/repository';
+import {Todo, TodoRelations} from '../models';
+import {FiledbDataSource} from '../datasources';
 import {inject} from '@loopback/core';
 
 export class TodoRepository extends DefaultCrudRepository<
   Todo,
-  typeof Todo.prototype.id
+  typeof Todo.prototype.id,
+  TodoRelations
 > {
   constructor(
-    @inject('datasources.memorytest') dataSource: MemorytestDataSource,
+    @inject('datasources.filedb') dataSource: FiledbDataSource,
   ) {
     super(Todo, dataSource);
   }

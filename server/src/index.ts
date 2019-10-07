@@ -1,15 +1,16 @@
-import {Haussteuerung} from './application';
+import {ServerApplication} from './application';
 import {ApplicationConfig} from '@loopback/core';
 
-export {Haussteuerung};
+export {ServerApplication};
 
 export async function main(options: ApplicationConfig = {}) {
-  const app = new Haussteuerung(options);
+  const app = new ServerApplication(options);
   await app.boot();
   await app.start();
 
   const url = app.restServer.url;
   console.log(`Server is running at ${url}`);
+  console.log(`Try ${url}/ping`);
 
   return app;
 }
