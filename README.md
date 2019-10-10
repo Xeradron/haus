@@ -18,7 +18,14 @@ eventuell kann duch apollo der state container weggelassen werden
 !!! apollo-angular kann mit local state management ngrx ersetzen!!!
 damit kann das problem für eine frontendapi aus openapi verbessert werden
 
+flex layout:
+@angular/flex-layout
+
+Loopback 4 to graphql:
 https://github.com/IBM/openapi-to-graphql
+
+graphql to apollo-angular service:
+https://graphql-code-generator.com/
 
 #server: 
 loopback 4
